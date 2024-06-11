@@ -1,0 +1,61 @@
+## Overview
+
+`Skeleton` is a React Native component that serves as a placeholder for content during the loading state,
+providing a smooth, pulsating animation similar to TailwindCSS's animate-pulse.
+
+## Preview
+
+<Tabs>
+  <Tab title="Preview">
+    <div style={{ display: 'flex', justifyContent: 'center', gap: '20px' }}>
+      <div>
+        <img src="https://raw.githubusercontent.com/Mobilecn-UI/nativecn-ui/main/assets/examples/components/skeleton-light.png" />
+        <p>Light mode</p>
+      </div>
+      <div>
+        <img src="https://raw.githubusercontent.com/Mobilecn-UI/nativecn-ui/main/assets/examples/components/skeleton-dark.png" />
+        <p>Dark mode</p>
+      </div>
+    </div>
+  </Tab>
+  <Tab title="Code">
+    ```jsx
+    <Skeleton className="w-48 h-4 mb-1" />
+    <Skeleton className="w-60 h-4 mb-1" />
+    <Skeleton className="w-56 h-4 mb-1" />
+    <Skeleton className="w-36 h-4" />
+    ```
+  </Tab>
+</Tabs>
+
+## Installation
+
+<Tabs>
+  <Tab title="CLI">
+  ```bash
+  npx nativecn-ui add Skeleton 
+  ```
+  </Tab>
+  <Tab title="Manual">
+    <Steps>
+      <Step title="First Step">
+        Include [Skeleton.tsx](https://github.com/Mobilecn-UI/nativecn-ui/blob/main/components/Skeleton.tsx) in your project.
+      </Step>
+      <Step title="Second Step">
+        Update the import paths to match your project setup.
+      </Step>
+    </Steps>
+  </Tab>
+</Tabs>
+
+## Properties
+
+- `className?: string` (optional) - The classes for the `View` container.
+
+## Usage
+
+```jsx
+<Skeleton className="w-48 h-4 mb-1" />
+<Skeleton className="w-60 h-4 mb-1" />
+<Skeleton className="w-36 h-4" />
+```

@@ -1,0 +1,57 @@
+---
+title: Introduction
+description: 'A UI library of beautiful and customizable React Native components.'
+---
+
+A project inspired by [shadcn/ui](https://ui.shadcn.com/).
+
+## Why Nativecn UI?
+
+- **Beautifully Designed**: Components are designed with a focus on aesthetics, delivering a great UI/UX.
+- **Customizable**: Modify components easily using Tailwind CSS classes —no `style` needed.
+- **Easy Integration**: Import components into your project as needed. No package installs.
+- **TypeScript-first**: Static typing for all components.
+
+## Installation
+
+<Steps>
+  <Step title="Create a new Expo project">
+```bash
+npx create-expo-app -t expo-template-blank-typescript
+```
+  </Step>
+  <Step title="Set up [NativeWind](https://www.nativewind.dev/quick-starts/expo)">
+    NativeWind allows you to style components using Tailwind CSS classes.
+
+```bash
+# Install dependencies
+yarn add nativewind@^4.0.1 react-native-reanimated
+yarn add --dev tailwindcss
+
+# Create a tailwind.config.js file
+npx tailwindcss init
+```
+
+  Finally, add `"nativewind/babel"` to your `babel.config.js` file.
+  </Step>
+  <Step title="3. Add nativecn-ui components">
+    Run the CLI to initialize your project and add components easily:
+
+```bash
+npx nativecn-ui init
+npx nativecn-ui add Button
+```
+
+    Or simply copy-paste from the [components directory](https://github.com/Mobilecn-UI/nativecn-ui/tree/main/components).
+  </Step>
+</Steps>
+
+## Examples
+
+|                                              Light mode                                               |                                              Dark mode                                               |
+| :---------------------------------------------------------------------------------------------------: | :--------------------------------------------------------------------------------------------------: |
+| ![](https://raw.githubusercontent.com/Mobilecn-UI/nativecn-ui/main/assets/examples/example-light.png) | ![](https://raw.githubusercontent.com/Mobilecn-UI/nativecn-ui/main/assets/examples/example-dark.png) |
+
+## Community and Contributions
+
+Feel free to open PRs or report issues on our [GitHub repository](https://github.com/Mobilecn-UI/nativecn-ui).

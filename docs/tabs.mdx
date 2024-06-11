@@ -1,0 +1,104 @@
+## Overview
+
+A set of layered sections of content —known as tab panels— that are displayed one at a time.
+
+## Preview
+
+<Tabs>
+  <Tab title="Preview">
+    <div style={{ display: 'flex', justifyContent: 'center' }}>
+      <div>
+        <img src="https://raw.githubusercontent.com/Mobilecn-UI/nativecn-ui/main/assets/examples/components/tabs-light.png" />
+        <p>Light mode</p>
+      </div>
+      <div>
+        <img src="https://raw.githubusercontent.com/Mobilecn-UI/nativecn-ui/main/assets/examples/components/tabs-dark.png" />
+        <p>Dark mode</p>
+      </div>
+    </div>
+  </Tab>
+  <Tab title="Code">
+    ```jsx
+    <Tabs defaultValue="account">
+      <TabsList>
+        <TabsTrigger id="account" title="Account" />
+        <TabsTrigger id="password" title="Password" />
+      </TabsList>
+      <TabsContent value="account">
+        <Text className="text-primary">Make changes to your account here.</Text>
+      </TabsContent>
+      <TabsContent value="password">
+        <Text className="text-primary">Change your password here.</Text>
+      </TabsContent>
+    </Tabs>
+    ```
+  </Tab>
+</Tabs>
+
+## Installation
+
+<Tabs>
+  <Tab title="CLI">
+  ```bash
+  npx nativecn-ui add Tabs 
+  ```
+  </Tab>
+  <Tab title="Manual">
+    <Steps>
+      <Step title="First Step">
+        Include [Tabs.tsx](https://github.com/Mobilecn-UI/nativecn-ui/blob/main/components/Tabs.tsx) in your project.
+        </Step>
+      <Step title="Second Step">
+        Update the import paths to match your project setup.
+      </Step>
+    </Steps>
+  </Tab>
+</Tabs>
+
+## Components
+
+### Tabs
+
+The parent container for the tabbing system.
+
+- `defaultValue: string` - The value of the tab that should be active when initially rendered.
+- `children` - Components to be rendered inside the Tabs container. Mainly `TabsList` and `TabsContent`.
+
+### TabsList
+
+The container for individual tab triggers.
+
+- `children` - `TabsTrigger` components.
+
+### TabsTrigger
+
+Triggers or buttons for each tab. Should be placed inside `TabsList`.
+
+- `id: string` - A unique identifier for the tab.
+- `title: string` - The label displayed on the tab trigger.
+
+### TabsContent
+
+Container for the content of each tab.
+
+- `value: string` - A unique value that associates the content with a trigger.
+- `children` - The content to display when the tab is active.
+
+## Usage
+
+### Basic usage
+
+```jsx
+<Tabs defaultValue="account">
+  <TabsList>
+    <TabsTrigger id="account" title="Account" />
+    <TabsTrigger id="password" title="Password" />
+  </TabsList>
+  <TabsContent value="account">
+    <Text className="text-primary">Make changes to your account here.</Text>
+  </TabsContent>
+  <TabsContent value="password">
+    <Text className="text-primary">Change your password here.</Text>
+  </TabsContent>
+</Tabs>
+```

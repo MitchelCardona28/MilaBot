@@ -1,0 +1,102 @@
+## Overview
+
+`RadioGroup` is a set of flexible React Native components designed for creating radio buttons.
+
+<Tabs>
+  <Tab title="Preview">
+    <div style={{ display: 'flex', justifyContent: 'center' }}>
+      <div style={{ marginRight: '40px' }}>
+        <img src="https://raw.githubusercontent.com/Mobilecn-UI/nativecn-ui/main/assets/examples/components/radio-group-light.png" />
+        <p>Light mode</p>
+      </div>
+      <div style={{ marginRight: '40px' }}>
+        <img src="https://raw.githubusercontent.com/Mobilecn-UI/nativecn-ui/main/assets/examples/components/radio-group-dark.png" />
+        <p>Dark mode</p>
+      </div>
+    </div>
+  </Tab>
+  <Tab title="Code">
+    ```jsx
+    <RadioGroup defaultValue="dark">
+      <RadioGroupItem value="light" label="Light" />
+      <RadioGroupItem value="dark" label="Dark" />
+      <View className="flex flex-row items-center gap-2">
+        <RadioGroupItem value="system" />
+        <RadioGroupLabel value="system">
+          <AvatarImage
+            className="h-8 w-8 rounded-full"
+            source={{
+              uri: 'https://avatars.githubusercontent.com/u/75042455?s=200&v=4',
+            }}
+          />
+        </RadioGroupLabel>
+      </View>
+    </RadioGroup>
+    ```
+  </Tab>
+</Tabs>
+
+## Installation
+
+<Tabs>
+  <Tab title="CLI">
+    ```bash
+    npx nativecn-ui add RadioGroup
+    ```
+  </Tab>
+  <Tab title="Manual">
+    <Steps>
+      <Step title="First Step">
+        Install the dependencies
+
+        ```bash
+        yarn add react-native-svg lucide-react-native
+        ```
+      </Step>
+      <Step title="Second Step">
+        Include [RadioGroup.tsx](https://github.com/Mobilecn-UI/nativecn-ui/blob/main/components/RadioGroup.tsx) in your project.
+      </Step>
+      <Step title="Third Step">
+        Update the import paths to match your project setup.
+      </Step>
+    </Steps>
+  </Tab>
+</Tabs>
+
+## API
+
+### `RadioGroup`
+
+- `defaultValue: string` - The default value of the radio group.
+
+### `RadioGroupItem`
+
+- `value: boolean` - The value of the button.
+- `label?: string (optional)` - The label of the button (rendered as `<Text>`).
+- `labelClasses?: string (optional)` - The classes for the label.
+- `className?: string (optional)` - The classes for the switch.
+
+### `RadioGroupLabel`
+
+- `value: string` - The value of the label (needs to match the value of the radio group item).
+- `className?: string (optional)` - The classes for the label.
+
+## Usage
+
+```jsx
+<RadioGroup defaultValue="dark">
+  <RadioGroupItem value="light" label="Light" />
+  <RadioGroupItem value="dark" label="Dark" />
+  <View className="flex flex-row items-center gap-2">
+    <RadioGroupItem value="system" />
+    <RadioGroupLabel value="system">
+      <AvatarImage
+        className="h-8 w-8 rounded-full"
+        source={{
+          uri: 'https://avatars.githubusercontent.com/u/75042455?s=200&v=4',
+        }}
+      />
+    </RadioGroupLabel>
+  </View>
+</RadioGroup>
+```

@@ -1,0 +1,152 @@
+## Overview
+
+`Card` is a versatile React Native component that provides a structured format for displaying content.
+Cards can display title, description, content, and footer. It also adapts automatically to the current color scheme.
+
+## Preview
+
+<Tabs>
+  <Tab title="Preview">
+    <div style={{ display: 'flex', justifyContent: 'center' }}>
+      <div>
+        <img src="https://raw.githubusercontent.com/Mobilecn-UI/nativecn-ui/main/assets/examples/components/card-light.png" />
+        <p>Light mode</p>
+      </div>
+      <div>
+        <img src="https://raw.githubusercontent.com/Mobilecn-UI/nativecn-ui/main/assets/examples/components/card-dark.png" />
+        <p>Dark mode</p>
+      </div>
+    </div>
+  </Tab>
+  <Tab title="Code">
+    ```jsx
+    <View className="flex gap-2">
+      <Text className="font-semibold text-xl text-primary">Card</Text>
+      <Card>
+        <CardHeader>
+          <CardTitle>Accelerate UI</CardTitle>
+          <CardDescription>Enter a new development experience</CardDescription>
+        </CardHeader>
+        <CardContent>
+          <Text className="text-base text-primary">
+            Sleek, easy to use components to build your next app faster.
+          </Text>
+        </CardContent>
+        <CardFooter>
+          <Text className="text-sm text-muted-foreground">
+            Inspired by shadcn/ui
+          </Text>
+        </CardFooter>
+      </Card>
+    </View>
+    ```
+  </Tab>
+</Tabs>
+
+## Installation
+
+<Tabs>
+  <Tab title="CLI">
+  ```bash
+  npx nativecn-ui add Card 
+  ```
+  </Tab>
+  <Tab title="Manual">
+    <Steps>
+      <Step title="First Step">
+        Include [Card.tsx](https://github.com/Mobilecn-UI/nativecn-ui/blob/main/components/Card.tsx) in your project.
+        </Step>
+      <Step title="Second Step">
+        Update the import paths to match your project setup.
+      </Step>
+    </Steps>
+  </Tab>
+</Tabs>
+
+## Components
+
+### Card
+
+The parent container for the card system.
+
+- `children` - Components to be rendered inside the Cards container. Mainly `CardHeader`, `CardContent`, and `CardFooter`.
+- `className?: string` - Tailwind CSS classes to be applied to the `View`.
+
+### CardHeader
+
+The container for the card header.
+
+- `children` - Components to be rendered inside the Cards container. Mainly `CardTitle` and `CardDescription`.
+- `className?: string` - Tailwind CSS classes to be applied to the `View`.
+
+### CardTitle
+
+The main text shown in the header.
+
+- `children` - Text to be rendered inside the `Text` element.
+- `className?: string` - Tailwind CSS classes to be applied to the `Text`.
+
+### CardDescription
+
+The secondary text shown in the header.
+
+- `children` - Text to be rendered inside the `Text` element.
+- `className?: string` - Tailwind CSS classes to be applied to the `Text`.
+
+### CardContent
+
+The body of the card.
+
+- `children` - Components to be rendered inside the `View` element.
+- `className?: string` - Tailwind CSS classes to be applied to the `View`.
+
+### CardFooter
+
+The footer of the card.
+
+- `children` - Components to be rendered inside the `View` element.
+- `className?: string` - Tailwind CSS classes to be applied to the `View`.
+
+### SimpleCard
+
+A pre-built `Card` component taking text as input.
+
+- `className?: string` - Tailwind CSS classes to be applied to the `View`.
+- `title?: string` - The title of the card.
+- `description?: string` - A brief description or subtitle.
+- `content?: string` - The main content inside the card.
+- `footer?: string` - Text to display at the bottom of the card.
+
+## Usage
+
+### Basic usage
+
+```jsx
+<Card>
+  <CardHeader>
+    <CardTitle>Accelerate UI</CardTitle>
+    <CardDescription>Enter a new development experience</CardDescription>
+  </CardHeader>
+  <CardContent>
+    <Text className="text-base text-primary">
+      Sleek, easy to use components to build your next app faster.
+    </Text>
+  </CardContent>
+  <CardFooter>
+    <Text className="text-sm text-muted-foreground">
+      Inspired by shadcn/ui
+    </Text>
+  </CardFooter>
+</Card>
+```
+
+### Basic usage with `SimpleCard` component
+
+```jsx
+<SimpleCard
+  title="Accelerate UI"
+  description="Enter a new development experience"
+  content="Sleek, easy to use components to build your next app faster."
+  footer="Inspired by shadcn/ui"
+/>
+```

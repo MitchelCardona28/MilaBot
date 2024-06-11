@@ -1,0 +1,93 @@
+## Overview
+
+`Button` is a React Native component designed for creating styled buttons. It provides quick style
+customization through the `variant` and `size` props, automatically adapting to the device's current
+color scheme. Control style using Tailwind CSS classes through the `className` and `labelClasses` props.
+
+## Preview
+
+<Tabs>
+  <Tab title="Preview">
+    <div style={{ display: 'flex', justifyContent: 'center' }}>
+      <div style={{ marginRight: '40px' }}>
+        <img src="https://raw.githubusercontent.com/Mobilecn-UI/nativecn-ui/main/assets/examples/components/buttons-light.png" />
+        <p>Light mode</p>
+      </div>
+      <div style={{ marginRight: '40px' }}>
+        <img src="https://raw.githubusercontent.com/Mobilecn-UI/nativecn-ui/main/assets/examples/components/buttons-dark.png" />
+        <p>Dark mode</p>
+      </div>
+    </div>
+  </Tab>
+  <Tab title="Code">
+    ```jsx
+    <View className="flex flex-row gap-3">
+      <Button label="Button" onPress={() => Alert.alert('Pressed 1')} />
+      <Button
+        label="Button"
+        variant="secondary"
+        onPress={() => Alert.alert('Pressed 2')}
+      />
+      <Button
+        label="Button"
+        variant="destructive"
+        onPress={() => Alert.alert('Pressed 3')}
+      />
+    </View>
+    ```
+  </Tab>
+</Tabs>
+
+## Installation
+
+<Tabs>
+  <Tab title="CLI">
+  ```bash 
+  npx nativecn-ui add Button 
+  ```
+  </Tab>
+  <Tab title="Manual">
+    <Steps>
+      <Step title="First Step">
+        Include [Button.tsx](https://github.com/Mobilecn-UI/nativecn-ui/blob/main/components/Button.tsx) in your project.
+        </Step>
+      <Step title="Second Step">
+        Update the import paths to match your project setup.
+      </Step>
+    </Steps>
+  </Tab>
+</Tabs>
+
+## Properties
+
+- `label: string` (required) - The label displayed on the button.
+- `labelClasses?: string (optional)` - The classes for the button's text.
+- `className?: string (optional)` - The classes for the parent container.
+- `variant?: Variant` (optional) - The variant of the button. Can be one of 'default', 'secondary', 'ghost', 'destructive', or 'link'.
+- `size?: Variant` (optional) - The size of the button. Can be one of 'default', 'sm', or 'lg'.
+
+> **Note**: The `variant` property determines the background color of the button. The color scheme (light/dark mode) is automatically detected.
+
+## Usage
+
+### Basic usage with `variant`
+
+```jsx
+<Button label="Button" />
+<Button label="Button" variant="secondary" />
+<Button label="Button" variant="destructive" />
+```
+
+### Basic usage with `size`
+
+```jsx
+<Button label="Button" size="sm" />
+<Button label="Button" size="lg" />
+```
+
+### Basic usage with custom classes
+
+```jsx
+<Button label="Button" className="px-6 py-3 rounded-lg" />
+<Button label="Button" labelClasses="font-semibold text-lg" />
+```
