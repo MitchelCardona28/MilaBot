@@ -65,3 +65,73 @@ Check out the [contributing guide](https://github.com/Mobilecn-UI/nativecn-ui/bl
 ## License
 
 Distributed under the [MIT license](https://github.com/Mobilecn-UI/nativecn-ui/blob/main/LICENSE).
+
+
+
+
+
+# MILABOT 
+
+MILABOT APP IS AN REACT NATIVE APP
+
+
+### How do I run this locally?
+
+```bash
+# Clone the repo
+git clone https://github.com/MitchelCardona28/MilaBot.git
+cd MILABOTAPP
+
+# Install deps
+yarn
+
+# Run it with Expo
+yarn start
+```m run dev
+```
+
+
+## Run Server Side 
+
+Go to the project directory
+
+```bash
+  cd server-bd
+```
+
+Install dependencies
+
+```bash
+  npm install
+```
+
+Start the server
+
+```bash
+  npm run dev
+```
+
+## Authors
+
+- 
+- [@lpfalcon](https://www.github.com/lpfalcon)
+- [@MitchelCardona28](https://github.com/MitchelCardona28)
+
+
+
+
+## Tech Stack
+
+**Client:** React, TailwindCSS
+
+**Server:** Node, Express
+
+
+## Deploy
+
+- 
+- 
+
+## License
+
+[MIT](#)
